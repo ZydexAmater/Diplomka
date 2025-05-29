@@ -3,30 +3,39 @@
 {% block title %}Барлық жазбалар{% endblock %}
 
 {% block content %}
-  <thead>
-  <tr>
-    <th>Аты-жөні</th>
-    <th>Тобы</th>
-    <th>Себебі</th>
-    <th>Уақыты</th>
-    <th>Әрекет</th>
-  </tr>
-</thead>
-<tbody>
-  {% for visit in visits %}
-  <tr>
-    <td>{{ visit.name }}</td>
-    <td>{{ visit.group }}</td>
-    <td>{{ visit.reason }}</td>
-    <td>{{ visit.timestamp|date:"d.m.Y H:i" }}</td>
-    <td>
-      <a href="{% url 'zydex:edit_visit' visit.pk %}">✏</a>
-      <a href="{% url 'zydex:delete_visit' visit.pk %}">🗑</a>
-    </td>
-  </tr>
-  {% empty %}
-  <tr><td colspan="5">Жазбалар жоқ</td></tr>
-  {% endfor %}
-</tbody>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+  <h1 class="text-2xl font-semibold text-gray-800 mb-6">Барлық жазбалар</h1>
 
+  <div class="overflow-x-auto bg-white shadow-md rounded-2xl">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-6 py-3 text-left text-sm font-medium text-gray-600 uppercase tracking-wider">Аты-жөні</th>
+          <th class="px-6 py-3 text-left text-sm font-medium text-gray-600 uppercase tracking-wider">Тобы</th>
+          <th class="px-6 py-3 text-left text-sm font-medium text-gray-600 uppercase tracking-wider">Себебі</th>
+          <th class="px-6 py-3 text-left text-sm font-medium text-gray-600 uppercase tracking-wider">Уақыты</th>
+          <th class="px-6 py-3 text-center text-sm font-medium text-gray-600 uppercase tracking-wider">Әрекет</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        {% for visit in visits %}
+        <tr class="hover:bg-gray-50">
+          <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ visit.name }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ visit.group }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ visit.reason }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ visit.timestamp|date:"d.m.Y H:i" }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-center space-x-4">
+            <a href="{% url 'zydex:edit_visit' visit.pk %}" class="text-blue-600 hover:text-blue-800" title="Өңдеу">✏</a>
+            <a href="{% url 'zydex:delete_visit' visit.pk %}" class="text-red-600 hover:text-red-800" title="Жою">🗑</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="px-6 py-4 text-center text-gray-500">Жазбалар жоқ</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 {% endblock %}
