@@ -1,0 +1,35 @@
+{% extends 'zydex/base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+        <div class="product">
+            <div class="product-image">
+                <img src="{{ product.image.url }}" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1>{{ product.name }}</h1>
+                <p class="price">{{ product.price }}</p>
+                <button class="contact-button">Сообщение</button>
+                <button class="phone-button">Показать телефон</button>
+                <div class="user-info">
+                    <p>Пользователь: <strong>Bumer</strong></p>
+                    <p>Рейтинг: <span class="rating">Хорошо</span> (1 оценка)</p>
+                </div>
+                <div class="location">
+                    <p>Местоположение: Усть-Каменогорск</p>
+                </div>
+            </div>
+        </div>
+        <div class="description-section">
+            <h2>Описание</h2>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+
+{% endblock %}

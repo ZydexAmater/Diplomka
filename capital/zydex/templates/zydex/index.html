@@ -1,0 +1,60 @@
+{% extends "zydex/base.html" %}
+{% load static %}
+
+<head>
+{% block css %} {% endblock %}
+</head>
+{% block slide %}
+<div class="head-context-slider">
+    <img src="{% static "images/simple.jpg"%}" alt="" class="slide">
+    <img src="{% static "images/tamaev.jpg"%}" alt="" class="slide">
+    <img src="{% static "images/san.jpg"%}" alt="" class="slide">
+    <img src="{% static "images/oleg.png"%}" alt="" class="slide">
+    <img src="{% static "images/1070.png"%}" alt="" class="slide">
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="main-middle-section">
+    <div class="middle-section">
+        <div class="middle-section-h1" >Почему вы должны выбрать НАС?</div>
+        <img  class="middle-logo" src="{% static "images/middle-logo" %} " alt="">
+    </div>
+</div>
+<div class="middle-section-footer2">
+    <div class="middle-section-header2">
+        <div class="section-main-mid122">
+            <section class="section-middle-card-1">
+                <h3 class="h3-title">Надежность техники</h3><img src="{% static "images/settings.png"%}">
+                <div class="con">
+                  <img src="{% static "images/safety.jpg" %} " alt="Avatar" style="width:290px"; height="200px">
+                </div>
+                <div class="footer-word">Надежность товара, соответсвующим всем требованиям <br> обращатся в сервисный центр!</div>
+            </section>
+            <section class="section-middle-card-2">
+                <h3 class="h3-title">Гарантиные возвраты</h3><img src="{% static "images/g.png"%}">
+                <div class="con">
+                    <img src="{% static "images/retake.png"%}" alt="Avatar" style="width:290px"; height="200px">
+                </div>
+                <div class="footer-word">Гарантия на все товары 1 год, возврат при наличии чека и хорошего состояния товара</div>
+            </section>
+            <section class="section-middle-card-3">
+                <h3 class="h3-title" >Обратная связь</h3><img src="{% static "images/edit.png"%}">
+               <div class="con">
+                    <img src="{% static "images/operator.png"%}" alt="Avatar" style="width:290px"; height="200px">
+                </div>
+                <div class="footer-word">Обратная свзять в течении 24/7, напишите если есть вопросы<br> обращатся в сервисный центр!</div>
+            </section>
+            <section class="section-middle-card-4">
+                <h3 class="h3-title">Сертификат</h3><img src="{% static "images/support.png"%}">
+                <div class="con">
+                    <img src="{% static "images/sertificate.jpg" %}" alt="Avatar" style="width:290px"; height="200px">
+                </div>
+                <div class="footer-word">Международный сертификат, подлежащего товара от всемирного Скибиди тойлет</div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
