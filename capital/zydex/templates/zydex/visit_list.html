@@ -1,0 +1,32 @@
+{% extends 'zydex/base.html' %}
+
+{% block title %}Барлық жазбалар{% endblock %}
+
+{% block content %}
+  <thead>
+  <tr>
+    <th>Аты-жөні</th>
+    <th>Тобы</th>
+    <th>Себебі</th>
+    <th>Уақыты</th>
+    <th>Әрекет</th>
+  </tr>
+</thead>
+<tbody>
+  {% for visit in visits %}
+  <tr>
+    <td>{{ visit.name }}</td>
+    <td>{{ visit.group }}</td>
+    <td>{{ visit.reason }}</td>
+    <td>{{ visit.timestamp|date:"d.m.Y H:i" }}</td>
+    <td>
+      <a href="{% url 'zydex:edit_visit' visit.pk %}">✏</a>
+      <a href="{% url 'zydex:delete_visit' visit.pk %}">🗑</a>
+    </td>
+  </tr>
+  {% empty %}
+  <tr><td colspan="5">Жазбалар жоқ</td></tr>
+  {% endfor %}
+</tbody>
+
+{% endblock %}

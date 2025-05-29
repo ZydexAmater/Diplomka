@@ -1,0 +1,13 @@
+{% extends 'zydex/base.html' %}
+{% block title %}Жазбаны жою{% endblock %}
+
+{% block content %}
+  <h2>Жазбаны жою</h2>
+  <p>Сіз бұл жазбаны рас жойғыңыз келе ме: <strong>{{ visit.name }}</strong>?</p>
+
+  <form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="submit-btn" style="background: red;">Иә, жою</button>
+    <a href="{% url 'zydex:nurse_visit_list' %}" class="submit-btn">Бас тарту</a>
+  </form>
+{% endblock %}

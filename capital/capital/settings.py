@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "debug_toolbar",
 
     'zydex',
-    'goods',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +142,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
  
 MEDIA_URL = 'media/'#this line is added and it creates a directory named media in your appfolder
 #where the uploaded images will be stored
+
+LOGIN_URL = '/auth/'  # или путь к твоей странице входа

@@ -1,0 +1,12 @@
+{% extends 'zydex/base.html' %}
+
+{% block title %}Жаңа жазба{% endblock %}
+
+{% block content %}
+  <h2>Медбикеге жазылу</h2>
+  <form method="POST" class="auth-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="submit-btn">Жазу</button>
+  </form>
+{% endblock %}

@@ -25,7 +25,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('zydex.urls', namespace='zydex')),
-    path('catalog/', include('goods.urls', namespace='catalog')),
 ] 
 
 
