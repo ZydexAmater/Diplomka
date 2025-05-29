@@ -22,8 +22,8 @@
             <div class="navigation">
                 <a href="https://www.tiktok.com/@glleeb8/video/6990765453693996293?q=nigerss&t=1714915074906"><img src="{% static "images/pc1.png" %}" class="img-logo"></a>
                 <div class="menu-container">
-                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                    <label for="menu-toggle" class="menu-button">Фильтры</label>
+                    <!--<input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-button">Фильтр</label>
                     <div class="menu-content">
                         {% if slug_url and request.GET.q %}
                         <form action="{% url 'catalog:index' slug_url|default:'' %}"  method="get" class="menu-form">
@@ -52,10 +52,10 @@
                             </div>
                             <button type="submit" class="menu-submit">Применить</button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
-                <a class="active" href="{% url "zydex:index" %}">Главное</a>
-                <div class="dropdown">
+                <a class="active" href="{% url 'zydex:index'%}">Басты бет</a>
+                <!--<div class="dropdown">
                     <a href="#" class="dropdown-toggle">Категории</a>
                     <div class="dropdown-content">
                         {% tag_categories as categories %}
@@ -63,10 +63,10 @@
                             <a href="{% url 'catalog:index' category.slug %}" class="dropdown-item">{{ category.name }}</a>
                         {% endfor %}
                     </div>
-                </div>
-                <a href="{% url 'zydex:about' %}">Про нас</a>
+                </div> 
+                <a href="{% url 'zydex:about' %}">Про нас</a>-->
                 <a href="{% url 'admin:index' %}">Админ панель</a>
-                <a href="{% url 'goods:cart' %}"><img src="{% static "images/basket.png" %}" alt="" class="img-logo-2"></a>
+                <!--<a href="{% url 'goods:cart' %}"><img src="{% static "images/basket.png" %}" alt="" class="img-logo-2"></a> -->
                 <form action="{% url 'catalog:search' %}" method="get" class="search-form" role="search">
                     <input type="text" name="q" placeholder="Search" class="search-input">
                     <button type="submit" class="search-button">Поиск</button>
@@ -80,7 +80,7 @@
         {% endblock %}
         
         <footer class="footer">
-                <ul class="pagination">
+                <!--<ul class="pagination">
                     <li class="{% if not goods or not goods.has_previous %}disabled{% endif %}">
                         <a id="prev" href="{% if goods.has_previous %}?{% change_params page=goods.previous_page_number %}{% else %}#{% endif %}">Previous</a>
                     </li>
@@ -92,7 +92,7 @@
                     <li class="{% if not goods.has_next %}disabled{% endif %}">
                         <a id="next" href="{% if goods.has_next %}?{% change_params page=goods.next_page_number %}{% else %}#{% endif %}">Next</a>
                     </li>
-                </ul>
+                </ul> -->
             <ul class="menu">
                 <li><a href="#">Главное</a></li>
                 <li><a href="#">О нас</a></li>

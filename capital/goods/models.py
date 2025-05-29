@@ -30,6 +30,9 @@ class Products(models.Model):
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
 
+
+class User(models.Model):
+
     
     def __str__(self):
         return self.name

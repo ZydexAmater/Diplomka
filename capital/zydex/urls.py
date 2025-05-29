@@ -5,5 +5,6 @@ app_name = 'zydex'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about/', views.about, name='about')
+    path('auth/', views.auth_view, name='auth'),
+    path('about/', views.about, name='about'),
 ]
