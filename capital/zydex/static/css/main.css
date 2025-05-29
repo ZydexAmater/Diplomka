@@ -524,7 +524,7 @@ section {
     width: 30em;
     max-width: 90%;
     margin: 0 auto;
-    padding-left: 1100px;
+    
 }
  
 .label-name {
@@ -552,7 +552,7 @@ section {
 .footer{
     position: relative;
     width: 100%;
-    padding: 20px 50px;
+    
     background: #3586ff;
     display: flex;
     justify-content: center;

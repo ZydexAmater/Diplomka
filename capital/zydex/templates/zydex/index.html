@@ -5,18 +5,26 @@
 {% block css %} {% endblock %}
 </head>
 {% block slide %}
-<div class="head-context-slider">
+<!--<div class="head-context-slider">
     <img src="{% static "images/simple.jpg"%}" alt="" class="slide">
     <img src="{% static "images/tamaev.jpg"%}" alt="" class="slide">
     <img src="{% static "images/san.jpg"%}" alt="" class="slide">
     <img src="{% static "images/oleg.png"%}" alt="" class="slide">
     <img src="{% static "images/1070.png"%}" alt="" class="slide">
 </div>
-</div>
+</div> -->
 {% endblock %}
 
 {% block content %}
-<div class="main-middle-section">
+<form class="footer-feedback" action="" method="get">
+    <label class="label-name" >Ваше имя:<input class="footer-input" type="text" name="name" placeholder="Имя Фамилия"></label>
+    <label class="label-name">Электронная почта:<input class="footer-input" type="email" name="email" placeholder="example@email.com"></label>
+    <label class="label-name">Отзыв:<textarea class="footer-textarea" name="comment" placeholder="Что вам понравилось?"></textarea></label>
+    <button class="footer-button" type="submit">Отправить</button>
+</form>
+{% endblock %}
+
+<!-- <div class="main-middle-section">
     <div class="middle-section">
         <div class="middle-section-h1" >Почему вы должны выбрать НАС?</div>
         <img  class="middle-logo" src="{% static "images/middle-logo" %} " alt="">
@@ -55,6 +63,4 @@
             </section>
         </div>
     </div>
-</div>
-
-{% endblock %}
+</div> -->

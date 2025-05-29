@@ -93,12 +93,6 @@
                         <a id="next" href="{% if goods.has_next %}?{% change_params page=goods.next_page_number %}{% else %}#{% endif %}">Next</a>
                     </li>
                 </ul>
-            <ul class="social">
-                <li><a href="#"><img src="{% static "images/whatsapp.png"%}" name="{% static "images/facebook.png"%}"></a></li>
-                <li><a href="#"><img src="{% static "images/youtube.png"%}" name="{% static "images/youtube.png"%}"></a></li>
-                <li><a href="#"><img src="{% static "images/instagram.png"%}" name="{% static "images/instagram.png"%}"></a></li>
-                <li><a href="#"><img src="{% static "images/facebook.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
-            </ul>
             <ul class="menu">
                 <li><a href="#">Главное</a></li>
                 <li><a href="#">О нас</a></li>
@@ -106,23 +100,7 @@
                 <li><a href="#">Команда</a></li>
                 <li><a href="#">Контакты</a></li>
              </ul>
-                <form class="footer-feedback" action="" method="get">
-                            <label class="label-name" >
-                                Ваше имя:
-                                <input class="footer-input" type="text" name="name" placeholder="Имя Фамилия">
-                            </label>
-                            <label class="label-name">
-                                Электронная почта:
-                                <input class="footer-input" type="email" name="email" placeholder="example@email.com">
-                            </label>
-                            <label class="label-name">
-                                Отзыв:
-                                <textarea class="footer-textarea" name="comment" placeholder="Что вам понравилось?"></textarea>
-                            </label>
-                            <button class="footer-button" type="submit">
-                                Отправить
-                            </button>
-                        </form>
+                
                 <p style="font-size: 23px;">©2024 Онлайн магазин | Все права защищены <br> Наш адрес: Женис 68а</p>
         </footer>
     </div>
